@@ -1,8 +1,8 @@
 <template>
 	<div id="app" class="d-flex flex-column body-wrapper sticky-footer-wrapper site">
 		<Navigation />
-		<b-container>
-			<router-view class="site-content"/>
+		<b-container class="d-flex align-items-center main-wrapper flex-fill">
+			<router-view class="d-flex"/>
 		</b-container>
 		<Footer />
 	</div>
