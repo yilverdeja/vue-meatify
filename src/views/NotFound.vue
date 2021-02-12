@@ -1,0 +1,18 @@
+<template>
+    <div class="d-flex align-items-center main-wrapper flex-fill">
+        <div class="container text-center d-flex justify-content-center align-items-center">
+            <!-- Start: Image Wrapper -->
+            <div><img class="img-fluid" src="/img/undraw_page_not_found_su7k.svg"></div><!-- End: Image Wrapper -->
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    
+}
+</script>
+
+<style scoped>
+
+</style>
