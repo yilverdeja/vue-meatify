@@ -7,7 +7,7 @@
             <div class="d-flex justify-content-center align-items-center justify-content-lg-center">
                 <b-form @submit.prevent="submitSample" class="shadow-lg d-flex flex-column justify-content-center align-items-start" style="background: #ffffff;padding: 20px;border-radius: 15px;" >
                     <b-form-row>
-                        <b-col sm="12">
+                        <b-col cols="12">
                             <b-form-group label="How often do you eat red meat?">
                                 <b-form-input type="number" name="redMeatInput" min="0" max="7" placeholder="1" required></b-form-input>
                                 <b-form-text>Red Meat is all types of livestock such as beef, pork, goat and lamb</b-form-text>
@@ -15,7 +15,7 @@
                         </b-col>
                     </b-form-row>
                     <b-form-row>
-                        <b-col sm="12">
+                        <b-col cols="12">
                             <b-form-group label="How often do you eat poultry?">
                                 <b-form-input type="number" name="poultryMeatInput" min="0" max="7" placeholder="1" required></b-form-input>
                                 <b-form-text>Poultry includes Chicken and Turkey</b-form-text>
@@ -23,7 +23,7 @@
                         </b-col>
                     </b-form-row>
                     <b-form-row>
-                        <b-col sm="12">
+                        <b-col cols="12">
                             <b-form-group label="How often do you eat seafood?">
                                 <b-form-input type="number" name="seafoodMeatInput" min="0" max="7" placeholder="1" required></b-form-input>
                                 <b-form-text>Seafood includes fish, crustaceans (crab and lobster) and molluscs (clambs, oysters, scallops and mussels)</b-form-text>
