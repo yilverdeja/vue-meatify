@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-7 text-center text-md-left d-none d-md-flex justify-content-center align-items-center">
                     <!-- Start: Image Wrapper -->
-                    <div><img class="img-fluid" src="/img/undraw_Hamburger_8ge6.svg"></div><!-- End: Image Wrapper -->
+                    <div><img class="img-fluid" src="@/assets/undraw_Hamburger.svg"></div><!-- End: Image Wrapper -->
                 </div>
                 <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center align-items-center">
                     <!-- Start: Form Wrapper -->

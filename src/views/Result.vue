@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-5 d-none d-md-flex justify-content-center align-items-center">
                     <!-- Start: Image Wrapper -->
-                    <div><img class="img-fluid" src="/img/undraw_diet_ghvw.svg"></div><!-- End: Image Wrapper -->
+                    <div><img class="img-fluid" src="@/assets/undraw_diet.svg"></div><!-- End: Image Wrapper -->
                 </div>
             </div>
         </div>

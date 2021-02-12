@@ -12,7 +12,7 @@
 				</div>
 				<div class="col-12 col-md-6 col-lg-5 d-none d-md-flex justify-content-center align-items-center">
 					<!-- Start: Image Wrapper -->
-					<div><img class="img-fluid" src="/img/undraw_barbecue_3x93%201.svg"></div><!-- End: Image Wrapper -->
+					<div><img class="img-fluid" src="@/assets/undraw_barbecue.svg"></div><!-- End: Image Wrapper -->
 				</div>
 			</div>
 		</div>
