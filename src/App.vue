@@ -1,11 +1,9 @@
 <template>
-	<div id="app">
-		<!-- Navigation -->
+	<div id="app" class="d-flex flex-column body-wrapper sticky-footer-wrapper">
 		<Navigation />
 		<b-container>
-		<router-view/>
+			<router-view/>
 		</b-container>
-		<!-- Footer -->
 		<Footer />
 	</div>
 </template>

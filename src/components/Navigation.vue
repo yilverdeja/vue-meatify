@@ -1,16 +1,21 @@
 <template>
     <div>
-        <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: rgba(255,255,255,0);">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="/" style="width: 60%;"><img class="img-fluid" src="@/assets/meatify_logo.svg"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1" style="width: 80%;">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item d-flex justify-content-center align-items-center"><a class="nav-link d-flex justify-content-center align-items-center" href="/" style="border-style: none;color: rgb(0,0,0);"><strong>Home</strong></a></li>
-                        <li class="nav-item d-flex justify-content-center align-items-center"><a class="nav-link disabled text-black-50" style="border-style: none;color: rgb(0,0,0);"><strong>Sign In</strong></a></li>
-                        <li class="nav-item d-flex justify-content-center align-items-center"><a class="btn btn-dark" role="button" style="border-style: none;" href="sample"><strong>Try Now</strong></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <b-navbar toggleable="md">
+            <b-container>
+                <b-navbar-brand href="/" class="d-flex align-items-center" style="width: 60%">
+                    <img src="@/assets/meatify_logo.svg" class="img-fluid" alt="">
+                </b-navbar-brand>
+
+                <b-navbar-toggle target="nav-collapse" class="toggle-btn"></b-navbar-toggle>
+
+                <b-collapse id="nav-collapse" is-nav>
+                    <b-navbar-nav class="ml-auto">
+                        <b-nav-item href="/" class="d-flex justify-content-center align-items-center navigation-link"><strong><span class="navigation-link-title">Home</span></strong></b-nav-item>
+                        <b-button href="sample" variant="dark" class="d-flex justify-content-center align-items-center"><strong>Try Now</strong></b-button>
+                    </b-navbar-nav>
+                </b-collapse>
+            </b-container>
+        </b-navbar>
     </div>
 </template>
 
@@ -21,5 +26,20 @@ export default {
 </script>
 
 <style scoped>
+    .navigation-link {
+        margin: 0 2rem;
+    }
 
+    .toggle-btn {
+        border-style: none
+    }
+
+    .navigation-link-title {
+        color: black
+    }
+
+    .navigation-link-title:hover {
+        color: grey
+    }
+    
 </style>
