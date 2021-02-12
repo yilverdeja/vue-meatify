@@ -2,7 +2,7 @@
     <div class="justify-content-center flex-fill">
         <b-row>
             <b-col sm="12" class="text-center">
-                <b-spinner label="Large Spinner" style="width: 128px;height: 128px;border-style: solid;color: rgb(230,103,103);"></b-spinner>
+                <b-spinner label="Large Spinner" style="width: 128px;height: 128px;border-style: solid;color: rgb(200,0,0);"></b-spinner>
                 <p class="lead" style="margin-top: 16px;"><span id="loadingText">{{loadingText}}</span>...</p>
             </b-col>
         </b-row>
@@ -15,6 +15,9 @@ const collectionPath = "loadingTexts";
 
 export default {
     name: 'Loading',
+	metaInfo: {
+		title: "Loading",
+	},
     data() {
         return {
             loadingTexts: [],

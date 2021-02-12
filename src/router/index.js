@@ -5,6 +5,7 @@ import Sample from '@/views/Sample.vue'
 import Loading from '@/views/Loading.vue'
 import Result from '@/views/Result.vue'
 import NotFound from '@/views/NotFound.vue'
+import Disclaimer from '@/views/Disclaimer.vue'
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,11 @@ const routes = [
     path: '/result',
     name: 'Result',
     component: Result
+  },
+  {
+    path: '/disclaimer',
+    name: 'Disclaimer',
+    component: Disclaimer
   },
   {
     path: "*",

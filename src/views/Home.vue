@@ -2,7 +2,8 @@
 	<b-row>
 		<b-col cols="12" md="6" lg="7" class="text-center text-md-left d-flex justify-content-center align-items-center">
 			<div>
-				<h1 class="display-3">Meatify</h1>
+				<h1 class="display-3 d-none d-sm-block">Meatify</h1>
+                <h1 class="display-4 d-sm-none">Meatify</h1>
 				<p class="lead">Personalize your meat eating experience for a balanced diet</p>
 				<p>Using State-of-the-Art Artificial Intelligence, Quantum &amp; Cloud Computing, and Blockchain, Meatify is disrupting the meat eating industry</p>
 				<b-button variant="primary" size="lg" to="/sample"><strong>Try Now</strong></b-button>
@@ -16,10 +17,13 @@
 
 <script>
 export default {
-  name: 'Home',
-  components: {
-  }
-}
+	name: 'Home',
+	metaInfo: {
+		titleTemplate: null
+	},
+	components: {
+	}
+	}
 </script>
 
 <style scoped>

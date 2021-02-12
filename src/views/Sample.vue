@@ -55,6 +55,9 @@
 <script>
 export default {
   name: 'Sample',
+	metaInfo: {
+		title: "Sample",
+	},
   components: {
   },
   methods: {

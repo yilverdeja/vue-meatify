@@ -2,7 +2,8 @@
     <b-row>
         <b-col cols="12" md="6" lg="7" class="text-center text-md-left d-flex justify-content-center align-items-center">
             <div>
-                <h1 class="display-3">Chicken Breast</h1>
+                <h1 class="display-3 d-none d-sm-block">Chicken Breast</h1>
+                <h1 class="display-4 d-sm-none">Chicken Breast</h1>
                 <p class="lead">{{subtitle}}<br></p>
                 <p>Fun Fact: {{funFact}}<br></p>
                 <div class="btn-group d-flex flex-column flex-lg-row" role="group" style="margin: 0px;margin-right: 0px;">
@@ -22,6 +23,9 @@ const collectionPath = "meatifydata";
 
 export default {
     name: 'Result',
+	metaInfo: {
+		title: "Result",
+	},
     data() {
         return {
             subtitle: "",

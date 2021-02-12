@@ -17,9 +17,10 @@ export default {
 		Navigation,
 		Footer
 	},
-	data: () => ({
-		//
-	}),
+	metaInfo: {
+		title: "Meatify",
+		titleTemplate: "%s | Meatify"
+	}
 }
 </script>
 
