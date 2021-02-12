@@ -8,7 +8,7 @@
             </div>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="https://www.benswildlifereserve.xyz" target="_blank">Ben's Reserve</a></li>
-                <li class="list-inline-item"><a href="/disclaimer">Disclaimer</a></li>
+                <li class="list-inline-item"><a href="disclaimer">Disclaimer</a></li>
                 <!-- <li class="list-inline-item"><a href="#">Privacy Policy</a></li> -->
             </ul>
             <p class="copyright">Meatify &copy; {{currentYear}}, Designed by <a href="https://www.yve.life" target="_blank">yve.</a></p>
