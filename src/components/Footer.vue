@@ -1,31 +1,31 @@
 <template>
-    <div>
-        <div class="d-flex justify-content-center footer-basic st" style="background: rgba(255,255,255,0);">
-            <footer>
-                <!-- Start: Social Icons -->
-                <div class="social">
-                    <a href="https://www.instagram.com/meatify.xyz/" style="border-style: none;" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto: meatifyxyz@gmail.com" style="border-style: none;" title="Email" target="_blank"><i class="far fa-envelope"></i></a>
-                    <a href="https://github.com/yilverdeja/meatify/issues/new?title=Feedback%20for%20Meatify%20Website&body=Explain%20your%20issue%20here" style="border-style: none;" title="Feedback" target="_blank"><i class="far fa-comment-dots"></i></a></div><!-- End: Social Icons -->
-                <!-- Start: Links -->
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="https://www.benswildlifereserve.xyz" target="_blank">Ben's Reserve</a></li>
-                    <li class="list-inline-item"><a href="#">Terms</a></li>
-                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                </ul><!-- End: Links -->
-                <!-- Start: Copyright -->
-                <p class="copyright">Meatify &copy; <span id="footerYear"></span>, Designed by <a href="https://www.yve.life" target="_blank">yve.</a></p><!-- End: Copyright -->
-            </footer>
-        </div>
+    <div class="d-flex justify-content-center footer-basic st" style="background: rgba(255,255,255,0);">
+        <footer>
+            <div class="social">
+                <b-link style="border:0px;" :href=meatifyEmail title="Email" target="_blank"><font-awesome-icon :icon="['far', 'envelope']"></font-awesome-icon></b-link>
+                <b-link style="border:0px" :href=meatifyFeedback title="Feedback" target="_blank"><font-awesome-icon :icon="['far', 'comment-dots']"></font-awesome-icon></b-link>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://www.benswildlifereserve.xyz" target="_blank">Ben's Reserve</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Meatify &copy; {{currentYear}}, Designed by <a href="https://www.yve.life" target="_blank">yve.</a></p>
+        </footer>
     </div>
 </template>
 
 <script>
 export default {
-    
+    data() {
+        return {
+            meatifyEmail: "mailto: meatifyxyz@gmail.com",
+            meatifyFeedback: "https://github.com/yilverdeja/vue-meatify/issues/new?title=Feedback%20for%20Meatify%20Website&body=Explain%20your%20issue%20here",
+            currentYear: (new Date).getFullYear()
+        }
+    }
 }
 </script>
 
 <style scoped>
-
 </style>
