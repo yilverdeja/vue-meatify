@@ -53,6 +53,7 @@
 </template>
 
 <script>
+import { auth } from "@/firebase";
 export default {
   name: 'Sample',
 	metaInfo: {
@@ -64,6 +65,12 @@ export default {
       submitSample(){
           this.$router.push("/loading");
       }
+  },
+  created: async function() {
+    let user = auth.currentUser;
+    if (!user) {
+        await auth.signInAnonymously().then().catch(err => console.log(err));
+    }
   }
 }
 </script>

@@ -2,7 +2,7 @@
     <div class="justify-content-center flex-fill">
         <b-row>
             <b-col sm="12" class="text-center">
-                <b-spinner label="Large Spinner" style="width: 128px;height: 128px;border-style: solid;color: rgb(200,0,0);"></b-spinner>
+                <b-spinner v-if="showSpinner" label="Large Spinner" style="width: 128px;height: 128px;border-style: solid;color: rgb(200,0,0);"></b-spinner>
                 <p class="lead" style="margin-top: 16px;"><span id="loadingText">{{loadingText}}</span>...</p>
             </b-col>
         </b-row>
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { db } from "@/firebase";
+import { db, auth } from "@/firebase";
 const collectionPath = "loadingTexts";
 
 export default {
@@ -22,11 +22,18 @@ export default {
         return {
             loadingTexts: [],
             loadingText: "Analyzing Data",
+            showSpinner: false,
             timer: null
         }
     },
     created() {
-        this.fetchData();
+        let user = auth.currentUser;
+        if (user) {
+            this.showSpinner = true;
+            this.fetchData();
+        } else {
+            this.$router.push("/")
+        }
     },
     watch: {
         "$route": "fetchData"
@@ -38,7 +45,12 @@ export default {
                     let texts = doc.data().texts;
                     this.loadingTexts = texts;
                     this.updateLoadingText();
-                })
+                });
+            }).catch(err => {
+                if (err) {
+                    console.log(err)
+                }
+                this.$router.push("/")
             })
         },
         updateLoadingText(){

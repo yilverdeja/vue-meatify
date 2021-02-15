@@ -16,14 +16,21 @@
 </template>
 
 <script>
+import { auth } from "@/firebase";
 export default {
 	name: 'Home',
 	metaInfo: {
 		titleTemplate: null
 	},
 	components: {
+	},
+	created: async function() {
+		let user = auth.currentUser;
+		if (!user) {
+			await auth.signInAnonymously().then().catch(err => console.log(err));
+		}
 	}
-	}
+}
 </script>
 
 <style scoped>

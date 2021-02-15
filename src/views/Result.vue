@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { db } from "@/firebase";
+import { db, auth } from "@/firebase";
 const collectionPath = "meatifydata";
 
 export default {
@@ -33,20 +33,13 @@ export default {
             recipeOfTheDay: ""
         }
     },
-    beforeRouteEnter (to, from, next) {
-        db.collection(collectionPath).get().then(querySnapshot => {
-            querySnapshot.forEach(doc => {
-                next(vm => {
-                    let facts = doc.data().facts;
-                    let recipes = doc.data().recipes;
-                    let subtitles = doc.data().subtitles;
-
-                    vm.funFact = facts[Math.floor(Math.random() * facts.length)]
-                    vm.recipeOfTheDay = recipes[Math.floor(Math.random() * recipes.length)]
-                    vm.subtitle = subtitles[Math.floor(Math.random() * subtitles.length)]
-                })
-            })
-        })
+    created() {
+        let user = auth.currentUser;
+        if (user) {
+            this.fetchData();
+        } else {
+            this.$router.push("/")
+        }
     },
     watch: {
         "$route": "fetchData"
@@ -63,15 +56,17 @@ export default {
                     this.recipeOfTheDay = recipes[this.getRandomNumberInArray(recipes)]
                     this.subtitle = subtitles[this.getRandomNumberInArray(subtitles)]
                 })
+            }).catch(err => {
+                if (err) {
+                    console.log(err)
+                }
+                this.$router.push("/")
             })
         },
         getRandomNumberInArray(arr){
             return Math.floor(Math.random() * arr.length)
         }
     },
-    computed: {
-
-    }
 }
 </script>
 
