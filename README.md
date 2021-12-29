@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d27887d7-dea8-402c-bf36-b7d5a487bae0/deploy-status)](https://app.netlify.com/sites/wizardly-kowalevski-ad46e4/deploys)
 # vue-meatify
 Creating a serverless version of [meatify](https://github.com/yilverdeja/meatify).
 
