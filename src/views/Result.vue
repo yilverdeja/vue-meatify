@@ -7,7 +7,7 @@
                 <p class="lead">{{subtitle}}<br></p>
                 <p>Fun Fact: {{funFact}}<br></p>
                 <div class="btn-group d-flex flex-column flex-lg-row" role="group" style="margin: 0px;margin-right: 0px;">
-                    <a class="btn btn-outline-primary" role="button" style="margin: 5px;margin-right: 5px;margin-left: 5px;" href="https://www.benswildlifereserve.xyz/store.html" target="_blank">Order Chicken Breasts</a>
+                    <a class="btn btn-outline-primary" role="button" style="margin: 5px;margin-right: 5px;margin-left: 5px;" href="https://friendly-hermann-3b7c13.netlify.app/store.html" target="_blank">Order Chicken Breasts</a>
                     <a class="btn btn-primary" role="button" style="margin: 5px;margin-right: 5px;margin-left: 5px;" :href=recipeOfTheDay target="_blank">Recipe of the Day</a></div>
             </div>
         </b-col>
