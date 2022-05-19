@@ -7,7 +7,7 @@
                 <b-link style="border:0px" :href=meatifyFeedback title="Feedback" target="_blank"><font-awesome-icon :icon="['far', 'comment-dots']"></font-awesome-icon></b-link>
             </div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="https://www.benswildlifereserve.xyz" target="_blank">Ben's Reserve</a></li>
+                <li class="list-inline-item"><a href="https://friendly-hermann-3b7c13.netlify.app/" target="_blank">Ben's Reserve</a></li>
                 <li class="list-inline-item"><a href="disclaimer">Disclaimer</a></li>
                 <!-- <li class="list-inline-item"><a href="#">Privacy Policy</a></li> -->
             </ul>
